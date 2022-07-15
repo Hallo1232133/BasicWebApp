@@ -21,7 +21,8 @@ public class QueryProcessor {
             numbers[1] = numbers[1].replaceAll("[^0-9]", "");;
             return String.valueOf(Integer.valueOf((numbers[0]) + Integer.valueOf(numbers[1])));
         } else if(query.contains("largest") ){
-            String[] testArray = query.split(", ");
+            String[] hallo = query.split(":");
+            String[] testArray = hallo[1].split(", ");
 
             int max = Integer.MIN_VALUE, maxIndex = 0;
 
