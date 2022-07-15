@@ -24,12 +24,11 @@ public class QueryProcessor {
             String[] hallo = query.split(": ");
             String[] testArray = hallo[1].split(", ");
 
-            int max = Integer.MIN_VALUE, maxIndex = 0;
+            int max = Integer.MIN_VALUE;
 
             for (int i = 0; i < testArray.length; i++) {
                 if (Integer.parseInt(testArray[i]) > max) {
                     max = Integer.parseInt(testArray[i]);
-                    maxIndex = i;
                 }
             }
             return String.valueOf(max);
