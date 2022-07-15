@@ -14,7 +14,7 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
-           return "WolframAlpha";
+           return "Der Echte";
         } else if(query.contains("plus") ){
             String[] numbers = query.split("plus");
             numbers[0] = numbers[0].replaceAll("[^0-9]", "");
