@@ -2,6 +2,8 @@ package de.tum.in.ase.eist;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+
 @Service
 public class QueryProcessor {
 
@@ -13,8 +15,13 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "WolframAlpha";
-        } else { // TODO extend the programm here
-            return "";
+        } else if(query.contains("plus") ){
+            String[] numbers = query.split("plus");
+            int i = Integer.parseInt(numbers[1]);
+            int j = Integer.parseInt(numbers[0]);
+            i = i + j;
+            return String.valueOf(i);
         }
+        return "";
     }
 }
