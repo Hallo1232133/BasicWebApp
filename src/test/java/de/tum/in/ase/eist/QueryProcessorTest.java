@@ -14,13 +14,13 @@ class QueryProcessorTest {
 		assertEquals("", queryProcessor.process("test"));
 	}
 
-	@Test
-	void testKnowsAboutShakespeare() {
-		String actual = queryProcessor.process("Shakespeare");
-		if (!actual.contains("playwright")) {
-			fail("The QueryProcessor does not know about Shakespeare.");
-		}
-	}
+//	@Test
+//	void testKnowsAboutShakespeare() {
+//		String actual = queryProcessor.process("Shakespeare");
+//		if (!actual.contains("playwright")) {
+//			fail("The QueryProcessor does not know about Shakespeare.");
+//		}
+//	}
 
 	@Test
 	void isNotCaseSensitive() {

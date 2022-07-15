@@ -26,13 +26,13 @@ public class QueryProcessor {
 
             int max = Integer.MIN_VALUE;
 
-            for (int i = 0; i < testArray.length; i++) {
-                if (Integer.parseInt(testArray[i]) > max) {
-                    max = Integer.parseInt(testArray[i]);
+            for (String s : testArray) {
+                if (Integer.parseInt(s) > max) {
+                    max = Integer.parseInt(s);
                 }
             }
             return String.valueOf(max);
         }
-        return "largest";
+        return "";
     }
 }
