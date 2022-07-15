@@ -17,10 +17,9 @@ public class QueryProcessor {
            return "WolframAlpha";
         } else if(query.contains("plus") ){
             String[] numbers = query.split("plus");
-            int i = Integer.parseInt(numbers[1]);
-            int j = Integer.parseInt(numbers[0]);
-            i = i + j;
-            return String.valueOf(i);
+            numbers[0].replaceAll("[^0-9]", "");
+            numbers[1].replaceAll("[^0-9]", "");;
+            return String.valueOf(Integer.valueOf((numbers[0]) + Integer.valueOf(numbers[1])));
         }
         return "";
     }
